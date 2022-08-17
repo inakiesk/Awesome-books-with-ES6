@@ -50,6 +50,7 @@ To get a local copy up and running follow these simple example steps.
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
+If you want to leave an issue feel free to do so here: [Github issue page](https://github.com/inakiesk/Awesome-books-with-ES6/issues).
 
 
 ## Show your support
@@ -62,4 +63,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is MIT licensed.
+This project is [MIT](./MIT.md) licensed.
