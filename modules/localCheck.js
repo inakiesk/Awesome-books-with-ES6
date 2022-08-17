@@ -1,7 +1,9 @@
 const bookInfo = {};
 
-export const localCheck = () => {
+const localCheck = () => {
   if (!localStorage.getItem('book')) {
     localStorage.setItem('book', JSON.stringify(bookInfo));
   }
-}
+};
+
+export default localCheck;

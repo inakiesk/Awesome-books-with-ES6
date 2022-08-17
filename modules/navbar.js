@@ -1,4 +1,4 @@
-const bookArr = []
+const bookArr = [];
 bookArr.titleSelector = document.querySelector('.title');
 bookArr.authorSelector = document.querySelector('.author');
 bookArr.addSelector = document.querySelector('.btn');
@@ -17,7 +17,31 @@ bookArr.books = [];
 bookArr.bookInfo = {};
 bookArr.by = [];
 
-export const navbar = () => {
+const navbar = () => {
+  const disableList = () => {
+    bookArr.navList.classList.toggle('disable');
+    if (bookArr.navAdd.classList.contains('disable')) {
+      bookArr.navAdd.classList.toggle('disable');
+    } else if (bookArr.navContact.classList.contains('disable')) {
+      bookArr.navContact.classList.toggle('disable');
+    }
+  };
+  const disableAdd = () => {
+    bookArr.navAdd.classList.toggle('disable');
+    if (bookArr.navList.classList.contains('disable')) {
+      bookArr.navList.classList.toggle('disable');
+    } else if (bookArr.navContact.classList.contains('disable')) {
+      bookArr.navContact.classList.toggle('disable');
+    }
+  };
+  const disableContact = () => {
+    bookArr.navContact.classList.toggle('disable');
+    if (bookArr.navList.classList.contains('disable')) {
+      bookArr.navList.classList.toggle('disable');
+    } else if (bookArr.navAdd.classList.contains('disable')) {
+      bookArr.navAdd.classList.toggle('disable');
+    }
+  };
   bookArr.navList.addEventListener('click', () => {
     bookArr.listSelector.classList.toggle('hidden');
     bookArr.listHeader.classList.toggle('hidden');
@@ -48,30 +72,6 @@ export const navbar = () => {
       bookArr.listHeader.classList.toggle('hidden');
     }
   });
-  const disableList = () => {
-    bookArr.navList.classList.toggle('disable');
-    if (bookArr.navAdd.classList.contains('disable')) {
-      bookArr.navAdd.classList.toggle('disable');
-    } else if (bookArr.navContact.classList.contains('disable')) {
-      bookArr.navContact.classList.toggle('disable');
-    }
-  }
-  
-  const disableAdd = () => {
-    bookArr.navAdd.classList.toggle('disable');
-    if (bookArr.navList.classList.contains('disable')) {
-      bookArr.navList.classList.toggle('disable');
-    } else if (bookArr.navContact.classList.contains('disable')) {
-      bookArr.navContact.classList.toggle('disable');
-    }
-  }
-  
-  const disableContact = () => {
-    bookArr.navContact.classList.toggle('disable');
-    if (bookArr.navList.classList.contains('disable')) {
-      bookArr.navList.classList.toggle('disable');
-    } else if (bookArr.navAdd.classList.contains('disable')) {
-      bookArr.navAdd.classList.toggle('disable');
-    }
-  }
-}
+};
+
+export default navbar;
